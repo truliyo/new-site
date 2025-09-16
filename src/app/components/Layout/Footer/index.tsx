@@ -25,13 +25,13 @@ const footer = () => {
   }, [])
 
   return (
-    <div className='bg-black' id='first-section'>
+    <div className='bg-[#01224B]' id='first-section'>
       <div className='container mx-auto max-w-2xl pt-48 pb-16 px-4 sm:px-6 lg:max-w-7xl lg:px-8'>
         <div className='grid grid-cols-1 gap-y-10 gap-x-16 sm:grid-cols-2 lg:grid-cols-12 xl:gap-x-8'>
           {/* COLUMN-1 */}
           <div className='col-span-4'>
             <h4 className='text-white text-3xl leading-9 mb-4 lg:mb-20'>
-              Desgy Solutions
+              Truliyo Digital
             </h4>
             <div className='flex items-center gap-4'>
               <div className='footer-icons'>
@@ -95,11 +95,11 @@ const footer = () => {
               <p className='text-center md:text-start text-white text-lg'>
                 @2025 - All Rights Reserved by{' '}
                 <Link
-                  href='https://getnextjstemplates.com/'
+                  href='https://truliyo.com/'
                   target='_blank'
                   className='hover:text-white/60 hover:underline'>
                   {' '}
-                  GetNextJsTemplates.com
+                  Triliyo Digital
                 </Link>
               </p>
             </div>

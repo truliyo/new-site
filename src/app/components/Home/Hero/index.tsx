@@ -28,7 +28,7 @@ const Hero = () => {
               <p className='text-primary text-lg font-bold'>Truliyo Digital</p>
             </div>
             <h1>
-              Dedicated to bring your ideas to life.
+              Creative Marketing for a Digital World.
             </h1>
             <Link href={'#'}>
               <button className='bg-primary text-white text-xl font-semibold py-5 px-12 rounded-full hover:bg-darkmode hover:cursor-pointer mt-10'>
