@@ -14,30 +14,30 @@ const headerData: HeaderItem[] = [
   { label: 'Team', href: '#Team' },
   { label: 'FAQ', href: '#FAQ' },
   { label: 'Blog', href: '#Blog' },
-  { label: 'Docs', href: '/documentation' },
+  { label: 'Contact Us', href: '#contact-Us' },
 ]
 
 // about data
 const Aboutdata: aboutdata[] = [
   {
-    heading: 'About us.',
+    heading: 'Why Choose Us',
     imgSrc: '/images/aboutus/imgOne.svg',
     paragraph:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem',
+      'Over 10 years of scaling D2C and eCommerce brands, delivering 2x–20x ROAS with a powerhouse team of data-driven marketers and creative storytellers trusted across global markets.',
     link: 'Learn more',
   },
   {
-    heading: 'Services.',
+    heading: 'Our Core Services',
     imgSrc: '/images/aboutus/imgTwo.svg',
     paragraph:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem',
+      'Expertise in paid media, SEO, social, affiliate marketing, web optimization, and performance-driven creative that converts',
     link: 'Learn more',
   },
   {
-    heading: 'Our Works.',
+    heading: 'The Truliyo Way',
     imgSrc: '/images/aboutus/imgThree.svg',
     paragraph:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem',
+      'From research and strategy to smart targeting, funnel design, creative testing, and data-backed scaling, we deliver profitable growth with real-time insights and recommendations.',
     link: 'Learn more',
   },
 ]
