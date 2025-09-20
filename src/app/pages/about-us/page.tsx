@@ -115,8 +115,9 @@ export default function AboutUs() {
             <MotionArticle
               key={a.id}
               variants={cardVariants}
-              className="group relative bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-6 flex flex-col gap-4 
-                 hover:bg-[#01224B] hover:text-white"
+              className="group relative bg-white dark:bg-gray-800 rounded-2xl shadow-md 
+                hover:shadow-xl transition-all duration-300 p-6 flex flex-col gap-4
+                hover:bg-[#1D99EC] hover:text-white"
             >
               <div className="flex items-start gap-4">
                 <div
@@ -150,28 +151,7 @@ export default function AboutUs() {
                 {a.description}
               </p>
 
-              <div className="mt-4">
-                <a
-                  href="#contact"
-                  className="inline-flex items-center gap-2 text-blue-600 hover:underline font-medium text-sm group-hover:text-white"
-                >
-                  Learn more
-                  <svg
-                    className="w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    aria-hidden
-                  >
-                    <path
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M5 12h14M12 5l7 7-7 7"
-                    />
-                  </svg>
-                </a>
-              </div>
+              
 
               <div className="absolute -bottom-3 right-4 w-20 h-1 rounded-full bg-gradient-to-r from-transparent to-black/10 opacity-30" />
             </MotionArticle>
@@ -189,7 +169,7 @@ export default function AboutUs() {
           </div>
           <div>
             <a
-              href="#contact"
+              href="/"
               className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg shadow-md transition"
             >
               Get a Quote

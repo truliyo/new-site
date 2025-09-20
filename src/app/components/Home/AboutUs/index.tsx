@@ -65,7 +65,7 @@ const Aboutus = () => {
                       {item.paragraph}
                     </p>
                     <Link
-                      href='#'
+                      href={item.path}  // 👈 updated to use the new path property
                       className='text-18 font-semibold text-primary hover-underline flex items-center'>
                       {item.link}
                       <Icon

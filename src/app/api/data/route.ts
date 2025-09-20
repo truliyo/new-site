@@ -25,6 +25,7 @@ const Aboutdata: aboutdata[] = [
     paragraph:
       'Over 10 years of scaling D2C and eCommerce brands, delivering 2x–20x ROAS with a powerhouse team of data-driven marketers and creative storytellers trusted across global markets.',
     link: 'Learn more',
+    path: '/pages/about-us',  // 👈 new route
   },
   {
     heading: 'Our Core Services',
@@ -32,6 +33,7 @@ const Aboutdata: aboutdata[] = [
     paragraph:
       'Expertise in paid media, SEO, social, affiliate marketing, web optimization, and performance-driven creative that converts',
     link: 'Learn more',
+    path: '/pages/Our-services',  // 👈 new route
   },
   {
     heading: 'The Truliyo Way',
@@ -39,6 +41,7 @@ const Aboutdata: aboutdata[] = [
     paragraph:
       'From research and strategy to smart targeting, funnel design, creative testing, and data-backed scaling, we deliver profitable growth with real-time insights and recommendations.',
     link: 'Learn more',
+    path: '/about/why-choose-us',  // 👈 new route
   },
 ]
 

@@ -33,13 +33,14 @@ const footer = () => {
             {/* <h4 className='text-white text-3xl leading-9 mb-4 lg:mb-20'>
               Truliyo Digital
             </h4> */}
-            <Image
-              src={'/images/footer/Untitled design (8) (1).png'} // image inside public/images folder
-              alt="Sample Image"
-              width={500}
-              height={300}
-              className="rounded-lg shadow-md"
-            />
+            <div className="relative w-32 sm:w-40 md:w-48 lg:w-56 h-20 md:h-24 lg:h-28">
+              <Image
+                src="/images/footer/oposite-logo-removebg-preview.png"
+                alt="Footer Logo"
+                fill
+                className="object-contain rounded-lg shadow-md"
+              />
+            </div>
             <div className="flex items-center gap-4">
               <div className="footer-icons">
                 <Link href="https://facebook.com">
