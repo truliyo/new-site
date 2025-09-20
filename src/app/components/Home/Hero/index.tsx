@@ -31,7 +31,7 @@ const Hero = () => {
               Creative Marketing for a Digital World.
             </h1>
             <Link href={'#'}>
-              <button className='bg-primary text-white text-xl font-semibold py-5 px-12 rounded-full hover:bg-darkmode hover:cursor-pointer mt-10'>
+              <button className='bg-[#1D99EC] text-white text-xl font-semibold py-5 px-12 rounded-full hover:bg-darkmode hover:cursor-pointer mt-10'>
                 Get started
               </button>
             </Link>

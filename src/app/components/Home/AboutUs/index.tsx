@@ -50,7 +50,7 @@ const Aboutus = () => {
               : about.map((item, i) => (
                   <div
                     key={i}
-                    className='hover:bg-darkmode bg-white rounded-3xl p-8 shadow-xl group'>
+                    className='hover:bg-[#1D99EC] bg-white rounded-3xl p-8 shadow-xl group'>
                     <h5 className='group-hover:text-white mb-5'>
                       {item.heading}
                     </h5>
