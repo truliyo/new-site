@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
-import { motion, MotionProps } from "framer-motion";
+import { motion, Variants } from "framer-motion";
+import type { Transition } from "framer-motion";
 import { Icon } from "@iconify/react";
 
 type Approach = {
@@ -55,7 +56,7 @@ const approaches: Approach[] = [
   },
 ];
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: {},
   show: {
     transition: {
@@ -64,26 +65,21 @@ const containerVariants = {
   },
 };
 
-const cardVariants = {
+const springTransition: Transition = {
+  type: "spring",
+  stiffness: 110,
+  damping: 18,
+};
+
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 24, scale: 0.98 },
   show: {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { type: "spring", stiffness: 110, damping: 18 },
+    transition: springTransition,
   },
 };
-
-type DivProps = React.ComponentPropsWithoutRef<"div"> & MotionProps;
-const MotionDiv = motion.div as unknown as React.ComponentType<DivProps>;
-
-type ArticleProps = React.ComponentPropsWithoutRef<"article"> & MotionProps;
-const MotionArticle =
-  motion.article as unknown as React.ComponentType<ArticleProps>;
-
-type InnerDivProps = React.ComponentPropsWithoutRef<"div"> & MotionProps;
-const MotionInnerDiv =
-  motion.div as unknown as React.ComponentType<InnerDivProps>;
 
 export default function AboutUs() {
   return (
@@ -104,15 +100,15 @@ export default function AboutUs() {
           into results.
         </p>
 
-        <MotionDiv
+        <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.15 }}
+          viewport={{ once: true, amount: 0.2 }}
         >
           {approaches.map((a) => (
-            <MotionArticle
+            <motion.article
               key={a.id}
               variants={cardVariants}
               className="group relative bg-white dark:bg-gray-800 rounded-2xl shadow-md 
@@ -125,11 +121,14 @@ export default function AboutUs() {
                   style={{ perspective: 800 }}
                   aria-hidden
                 >
-                  <MotionInnerDiv
+                  <motion.div
                     className="w-12 h-12 rounded-full flex items-center justify-center bg-white/10 backdrop-blur-sm"
                     whileHover={{ rotateY: 18, rotateX: -8, scale: 1.06 }}
-                    transition={{ type: "spring", stiffness: 200, damping: 18 }}
-                    aria-hidden
+                    transition={{
+                      type: "spring",
+                      stiffness: 200,
+                      damping: 18,
+                    }}
                   >
                     <Icon
                       icon={a.icon}
@@ -137,9 +136,8 @@ export default function AboutUs() {
                       height="28"
                       className="text-white"
                       aria-hidden
-                      role="img"
                     />
-                  </MotionInnerDiv>
+                  </motion.div>
                 </div>
 
                 <h3 className="text-lg font-semibold text-black dark:text-white mt-1 group-hover:text-white">
@@ -151,12 +149,10 @@ export default function AboutUs() {
                 {a.description}
               </p>
 
-              
-
               <div className="absolute -bottom-3 right-4 w-20 h-1 rounded-full bg-gradient-to-r from-transparent to-black/10 opacity-30" />
-            </MotionArticle>
+            </motion.article>
           ))}
-        </MotionDiv>
+        </motion.div>
 
         <div className="mt-12 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
           <div>
