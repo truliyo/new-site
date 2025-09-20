@@ -18,7 +18,7 @@ export default function Booking() {
     iframe.width = "100%";
     iframe.height = "700";
     iframe.frameBorder = "0";
-    iframe.allowTransparency = true;
+    // iframe.allowTransparency = true;
     iframe.allow = "camera; microphone; autoplay; clipboard-write";
     iframe.className = "rounded-2xl shadow-lg";
 
