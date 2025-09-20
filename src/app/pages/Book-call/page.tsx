@@ -3,6 +3,7 @@
 
 import { useEffect, useRef } from "react";
 import { Icon } from "@iconify/react";
+import CountUp from "react-countup";
 
 export default function Booking() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -17,10 +18,12 @@ export default function Booking() {
       "https://cal.com/truliyo-e1go1a/30min?theme=light&primaryColor=3b82f6";
     iframe.width = "100%";
     iframe.height = "700";
-    iframe.frameBorder = "0";
-    // iframe.allowTransparency = true;
-    iframe.allow = "camera; microphone; autoplay; clipboard-write";
-    iframe.className = "rounded-2xl shadow-lg";
+    iframe.setAttribute("frameBorder", "0");
+    iframe.setAttribute(
+      "allow",
+      "camera; microphone; autoplay; clipboard-write"
+    );
+    iframe.className = "rounded-2xl shadow-lg w-full";
 
     containerRef.current.appendChild(iframe);
   }, []);
@@ -69,7 +72,7 @@ export default function Booking() {
                 Leads Generated
               </p>
               <p className="text-2xl font-extrabold text-blue-700 mt-1">
-                4,985,623
+                <CountUp end={4985623} duration={3} separator="," />
               </p>
             </div>
 
@@ -85,7 +88,7 @@ export default function Booking() {
                 Calls Generated
               </p>
               <p className="text-2xl font-extrabold text-blue-700 mt-1">
-                3,585,952
+                <CountUp end={3585952} duration={3} separator="," />
               </p>
             </div>
 
@@ -101,7 +104,7 @@ export default function Booking() {
                 Revenue Generated
               </p>
               <p className="text-2xl font-extrabold text-blue-700 mt-1">
-                $245,821
+                $<CountUp end={245821} duration={3} separator="," />
               </p>
             </div>
           </div>
