@@ -25,7 +25,7 @@ const FAQ = () => {
                   <div>
                     <DisclosureButton className='flex w-full justify-between items-center text-left text-2xl font-medium focus:outline-hidden hover:cursor-pointer'>
                       <span className='text-black'>
-                        Can you design my site?
+                        What digital marketing services do you offer?
                       </span>
                       <div
                         className={`h-5 w-5 transform transition-transform duration-300 ${
@@ -36,10 +36,7 @@ const FAQ = () => {
                     </DisclosureButton>
                     <DisclosurePanel className='text-base text-black/50 font-normal text-left pt-4 mt-6 border-t border-border'>
                       <div className='lg:max-w-70%'>
-                        Craven omni memoria patriae zombieland clairvius
-                        narcisse religionis sunt diri undead historiarum.
-                        Golums, zombies unrelenting et Raimi fascinati
-                        beheading.
+                        We provide a full range of digital marketing services including SEO, paid media (Google, Meta, LinkedIn ads), social media marketing, affiliate marketing, website optimization, and creative content solutions tailored to grow your business online.
                       </div>
                     </DisclosurePanel>
                   </div>
@@ -51,7 +48,7 @@ const FAQ = () => {
                 {({ open }) => (
                   <>
                     <DisclosureButton className='flex w-full justify-between items-center rounded-lg text-left text-2xl font-medium focus:outline-hidden hover:cursor-pointer'>
-                      <span className='text-black'>Can you code my site?</span>
+                      <span className='text-black'>How long does it take to see results from digital marketing?</span>
                       <div
                         className={`h-5 w-5 transform transition-transform duration-300 ${
                           open ? 'rotate-180' : ''
@@ -61,10 +58,7 @@ const FAQ = () => {
                     </DisclosureButton>
                     <DisclosurePanel className='text-base text-black/50 pt-4 mt-6 text-left border-t border-border'>
                       <div className='lg:max-w-70%'>
-                        Craven omni memoria patriae zombieland clairvius
-                        narcisse religionis sunt diri undead historiarum.
-                        Golums, zombies unrelenting et Raimi fascinati
-                        beheading.
+                        Results vary depending on the strategy and channels used. Paid campaigns can show initial results within days, while SEO and organic growth strategies typically take a few months to generate sustainable traffic and conversions.
                       </div>
                     </DisclosurePanel>
                   </>
@@ -77,7 +71,7 @@ const FAQ = () => {
                 {({ open }) => (
                   <>
                     <DisclosureButton className='flex w-full justify-between items-center rounded-lg text-left text-2xl font-medium focus:outline-hidden hover:cursor-pointer'>
-                      <span className='text-black'>Where are you located?</span>
+                      <span className='text-black'>Do you provide customized marketing strategies for each business?</span>
                       <div
                         className={`h-5 w-5 transform transition-transform duration-300 ${
                           open ? 'rotate-180' : ''
@@ -87,10 +81,7 @@ const FAQ = () => {
                     </DisclosureButton>
                     <DisclosurePanel className='text-base text-black/50 pt-4 mt-6 font-normal text-left border-t border-border'>
                       <div className='lg:max-w-70%'>
-                        Craven omni memoria patriae zombieland clairvius
-                        narcisse religionis sunt diri undead historiarum.
-                        Golums, zombies unrelenting et Raimi fascinati
-                        beheading.
+                        Yes! Every business is unique, so we analyze your market, audience, and goals to create a personalized digital marketing strategy that maximizes ROI and drives measurable results.
                       </div>
                     </DisclosurePanel>
                   </>

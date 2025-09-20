@@ -41,7 +41,7 @@ const Aboutdata: aboutdata[] = [
     paragraph:
       'From research and strategy to smart targeting, funnel design, creative testing, and data-backed scaling, we deliver profitable growth with real-time insights and recommendations.',
     link: 'Learn more',
-    path: '/about/why-choose-us',  // 👈 new route
+    path: '/pages/Our-process',  // 👈 new route
   },
 ]
 
