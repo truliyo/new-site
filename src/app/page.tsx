@@ -27,7 +27,7 @@ export default function Home() {
       <Dedicated />
       <Digital />
       <Beliefs />
-      <Work />
+      {/* <Work /> */}
       <Team />
       <Featured />
       {/* <Manage /> */}

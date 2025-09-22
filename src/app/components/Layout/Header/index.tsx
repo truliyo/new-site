@@ -125,15 +125,17 @@ const Header: React.FC = () => {
                 </div>
               </div>
             )}
-            <button
-              className="hidden lg:block relative z-[1] px-4 py-2 rounded-lg border border-[#1D99EC] 
-             bg-[#1D99EC] text-white hover:text-[#1D99EC] cursor-pointer overflow-hidden
-             after:content-[''] after:absolute after:top-0 after:right-0 after:w-0 after:h-full after:rounded-lg 
-             after:bg-white after:-z-10 after:transition-all after:duration-300 after:ease-in-out
-             hover:after:left-0 hover:after:w-full active:translate-y-[2px]"
-            >
-              Book a call
-            </button>
+            <Link
+  href="/pages/Book-call"
+  className="hidden lg:block relative z-[1] px-4 py-2 rounded-lg border border-[#1D99EC] 
+    bg-[#1D99EC] text-white hover:text-[#1D99EC] cursor-pointer overflow-hidden
+    after:content-[''] after:absolute after:top-0 after:right-0 after:w-0 after:h-full after:rounded-lg 
+    after:bg-white after:-z-10 after:transition-all after:duration-300 after:ease-in-out
+    hover:after:left-0 hover:after:w-full active:translate-y-[2px]"
+  aria-label="Book a call"
+>
+  Book a call
+</Link>
 
             {isSignUpOpen && (
               <div className="fixed top-0 left-0 w-full h-full bg-black/50 flex items-center justify-center z-50">

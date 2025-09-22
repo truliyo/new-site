@@ -151,53 +151,37 @@ const PlansData = [
 // testimonial data
 const TestimonialsData: testimonials[] = [
   {
-    name: 'Robert Fox',
-    profession: 'CEO, Parkview Int.Ltd',
+    name: 'Sushant  Kumar',
+    profession: 'Director, @Glance',
     comment:
-      'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
-    imgSrc: '/images/testimonial/user1.svg',
+      'I am delighted to recommend Sam Gupta for his exceptional contribution on Roposo Clout platform. Sam has been a transformative force . Sam’s expertise in digital transformation and e-commerce strategy have been invaluable to Roposo Clout.',
+    imgSrc: '/images/testimonial/image.png',
     rating: 5,
   },
   {
-    name: 'Leslie Alexander',
-    profession: 'CEO, Parkview Int.Ltd',
+    name: 'Ankit Tarway',
+    profession: 'COO, BacktoBed',
     comment:
-      'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
-    imgSrc: '/images/testimonial/user2.svg',
+      'Truliyo Digital helped us scale our e-commerce store based in australlia with profitable ad campaings. Truly impressed with the results',
+    imgSrc: '/images/testimonial/image (2-1).png',
     rating: 4,
   },
   {
-    name: 'Cody Fisher',
-    profession: 'CEO, Parkview Int.Ltd',
+    name: 'Jessica Stone',
+    profession: 'Store Owner',
     comment:
-      'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
-    imgSrc: '/images/testimonial/user3.svg',
+      'With Truliyo Digital managing 360° marketing, I could focus on my brand while their strategies boosted our rankings, traffic, and growth.',
+    imgSrc: '/images/testimonial/jessica.png',
     rating: 4,
   },
   {
-    name: 'Robert Fox',
-    profession: 'CEO, Parkview Int.Ltd',
+    name: 'David Anderson',
+    profession: '(Store Owner)',
     comment:
-      'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
-    imgSrc: '/images/testimonial/user1.svg',
+      'Truliyo Digital built us a modern, responsive website that’s both fast and user-friendly. Highly recommend them.',
+    imgSrc: '/images/testimonial/david.png',
     rating: 4,
-  },
-  {
-    name: 'Leslie Alexander',
-    profession: 'CEO, Parkview Int.Ltd',
-    comment:
-      'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
-    imgSrc: '/images/testimonial/user2.svg',
-    rating: 4,
-  },
-  {
-    name: 'Cody Fisher',
-    profession: 'CEO, Parkview Int.Ltd',
-    comment:
-      'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
-    imgSrc: '/images/testimonial/user3.svg',
-    rating: 4,
-  },
+  }
 ]
 
 // artical data
@@ -263,30 +247,30 @@ const FooterLinksData: footerlinks[] = [
       { label: 'Blog', href: '#Blog' },
     ],
   },
-  {
-    section: 'Category',
-    links: [
-      { label: 'Design', href: '/' },
-      { label: 'Mockup', href: '/' },
-      { label: 'View all', href: '/' },
-      { label: 'Log In', href: '/' },
-    ],
-  },
-  {
-    section: 'Pages',
-    links: [
-      { label: '404', href: '/' },
-      { label: 'Instructions', href: '/' },
-      { label: 'License', href: '/' },
-    ],
-  },
-  {
-    section: 'Others',
-    links: [
-      { label: 'Styleguide', href: '/' },
-      { label: 'Changelog', href: '/' },
-    ],
-  },
+  // {
+  //   section: 'Category',
+  //   links: [
+  //     { label: 'Design', href: '/' },
+  //     { label: 'Mockup', href: '/' },
+  //     { label: 'View all', href: '/' },
+  //     { label: 'Log In', href: '/' },
+  //   ],
+  // },
+  // {
+  //   section: 'Pages',
+  //   links: [
+  //     { label: '404', href: '/' },
+  //     { label: 'Instructions', href: '/' },
+  //     { label: 'License', href: '/' },
+  //   ],
+  // },
+  // {
+  //   section: 'Others',
+  //   links: [
+  //     { label: 'Styleguide', href: '/' },
+  //     { label: 'Changelog', href: '/' },
+  //   ],
+  // },
 ]
 
 export const GET = () => {

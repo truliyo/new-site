@@ -62,7 +62,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ items }) => {
 
   return (
     <div className='relative py-10'>
-      <div className='bg-white dark:bg-darkHeroBg shadow-testimonial m-3 p-10 rounded-3xl'>
+      <div className='bg-white dark:bg-darkHeroBg shadow-testimonial m-3 p-10 rounded-3xl min-h-[350px]'>
         <Image
           src={items.imgSrc}
           alt={`${items.name} - ${items.profession} testimonial image`}
@@ -127,7 +127,7 @@ const Testimonial: React.FC = () => {
       <div className='container mx-auto max-w-7xl px-4'>
         <div className=''>
           <div className='text-center'>
-            <h2 className='my-3'>See what others are saying.</h2>
+            <h2 className='my-3 leading-tight'>Proof of growth, straight from our clients.</h2>
           </div>
           <div className='mt-20'>
             <Slider {...settings}>
