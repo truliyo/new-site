@@ -14,37 +14,37 @@ type ProcessStep = {
 
 const processSteps: ProcessStep[] = [
   {
-    title: "Research & Strategy",
-    subtitle: "Market Intelligence & Strategic Roadmapping",
+    title: "Data-Driven Market Intelligence",
+    // subtitle: "Market Intelligence & Strategic Roadmapping",
     description:
-      "We begin with a deep dive into your brand, market, and audience to uncover opportunities and design a winning strategy tailored to your goals.",
+      "At Truliyo Digital, every campaign begins with in-depth research and strategic road mapping. By analyzing audience behavior, market trends, and competitors, we create a blueprint designed to maximize ROI and long-term scalability.",
     icon: "mdi:lightbulb-on-outline",
   },
   {
-    title: "Smart Targeting & Funnel Design",
+    title: "Precision Targeting & Funnel Architecture",
     description:
-      "We map customer journeys and craft conversion-focused funnels that reach the right audience at the right time across multiple touchpoints.",
+      "We engineer smart targeting frameworks and conversion funnels that guide users from awareness to purchase. Our approach ensures that every touchpoint is optimized for engagement and conversions.",
     icon: "mdi:target",
   },
   {
-    title: "Creative Experiments",
-    subtitle: "A/B & Multivariate Testing",
+    title: "A/B & Multivariate Creative Experiments",
+    // subtitle: "A/B & Multivariate Testing",
     description:
-      "Through rigorous testing of visuals, copy, and messaging, we identify what resonates most with your audience and scale only the top performers.",
+      "Through A/B and multivariate experiments, our team identifies the highest-performing creatives and messages. This data-backed process allows us to refine campaigns continuously for better engagement and higher conversions.",
     icon: "mdi:flask-outline",
   },
   {
-    title: "Scaling Profitably",
-    subtitle: "Data-Backed Adjustments",
+    title: "Scalable Growth Optimization",
+    // subtitle: "Data-Backed Adjustments",
     description:
-      "With continuous data monitoring, we optimize campaigns in real-time, ensuring you scale effectively while maximizing return on ad spend (ROAS).",
+      "At Truliyo Digital, profitability drives everything we do. By leveraging performance insights and advanced analytics, we continuously fine-tune campaigns to ensure brands scale effectively. Our approach focuses on maximizing ROAS while strategically reducing customer acquisition costs, enabling businesses to grow sustainably and profitably in competitive markets.",
     icon: "mdi:trending-up",
   },
   {
-    title: "Real-Time Reporting",
-    subtitle: "Strategic Recommendations",
+    title: "Real-Time Reporting With Strategic Recommendations",
+    // subtitle: "Strategic Recommendations",
     description:
-      "Get transparent insights with dashboards and reports that not only track performance but also provide actionable recommendations for growth.",
+      "Truliyo Digital provides real-time dashboards and clear reporting, paired with strategic recommendations. Our clients get complete visibility into performance and actionable insights to make smarter business decisions.",
     icon: "mdi:chart-timeline-variant",
   },
 ];
@@ -68,9 +68,8 @@ export default function OurProcess() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto"
         >
-          Our process is built on strategy, creativity, and data. Step by step,
-          we guide your brand from insight to execution, ensuring scalable and
-          sustainable growth.
+          Best practices in action from day zero,
+profitable, scalable, unstoppable.
         </motion.p>
       </section>
 
@@ -92,14 +91,14 @@ export default function OurProcess() {
                 <div className="p-4 rounded-xl bg-[#1D99EC] text-white group-hover:bg-white group-hover:text-[#1D99EC] transition-colors duration-300">
                   <Icon icon={step.icon} className="w-8 h-8" />
                 </div>
-                <h3 className="ml-4 text-2xl font-semibold">{step.title}</h3>
+                <h3 className="ml-4 text-2xl font-bold">{step.title}</h3>
               </div>
               {step.subtitle && (
                 <p className="text-sm font-medium opacity-80 mb-2">
                   {step.subtitle}
                 </p>
               )}
-              <p className="text-sm opacity-90 leading-relaxed flex-grow">
+              <p className="text-md opacity-90 leading-relaxed flex-grow">
                 {step.description}
               </p>
             </motion.div>

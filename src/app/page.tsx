@@ -13,6 +13,8 @@ import Testimonial from '@/app/components/Home/Testimonials'
 import Articles from '@/app/components/Home/Articles'
 import Join from '@/app/components/Home/Joinus'
 import Insta from '@/app/components/Home/Insta'
+import ServicesGrid from './components/Home/our-services'
+import WhatSetsUsApart from './components/Home/Setus-apart'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -29,9 +31,11 @@ export default function Home() {
       <Beliefs />
       {/* <Work /> */}
       <Team />
-      <Featured />
+      <ServicesGrid />
+      <WhatSetsUsApart />
+      {/* <Featured /> */}
       {/* <Manage /> */}
-      <FAQ />
+      {/* <FAQ /> */}
       <Testimonial />
       <Articles />
       <Join />
