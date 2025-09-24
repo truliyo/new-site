@@ -134,7 +134,7 @@ profitable, scalable, unstoppable.
           transition={{ duration: 0.5, delay: 0.3 }}
         >
           <Link
-            href="/"
+            href="/pages/Book-call"
             className="inline-block px-8 py-3 rounded-lg bg-white text-[#1D99EC] font-semibold shadow-md hover:bg-gray-100 transition"
           >
             Book a Call

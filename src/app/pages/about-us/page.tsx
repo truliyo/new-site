@@ -165,10 +165,10 @@ export default function AboutUs() {
           </div>
           <div>
             <a
-              href="/"
+              href="/pages/Book-call"
               className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg shadow-md transition"
             >
-              Get a Quote
+              Book a call
             </a>
           </div>
         </div>

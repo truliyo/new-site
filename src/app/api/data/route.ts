@@ -28,7 +28,7 @@ const Aboutdata: aboutdata[] = [
     path: '/pages/about-us',  // 👈 new route
   },
   {
-    heading: 'Our Core Services',
+    heading: 'Our Capabilities',
     imgSrc: '/images/aboutus/imgTwo.svg',
     paragraph:
       'Expertise in paid media, SEO, social, affiliate marketing, web optimization, and performance-driven creative that converts',
