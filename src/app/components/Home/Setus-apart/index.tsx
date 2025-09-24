@@ -2,30 +2,30 @@ import React from "react";
 
 const FEATURES = [
   {
-    imageUrl: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
-    title: "ROI-Obsessed Growth Strategies",
+    imageUrl: "/images/setus-appart/set-us-1-ezgif.com-resize.webp",
+    title: "100% Transparency With Real-Time Dashboards",
     // description: "We leverage the latest and greatest to empower your business."
   },
   {
-    imageUrl: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=80",
-    title: "100% Transparency With Real-Time Dashboards",
+    imageUrl: "/images/setus-appart/set-us-2-ezgif.com-jpg-to-webp-converter.jpg",
+    title: "Client-First Account Management",
     // description: "Creative strategies tailor-made to set you apart."
   },
   {
-    imageUrl: "https://images.unsplash.com/photo-1532619675605-122d88a58e5e?auto=format&fit=crop&w=400&q=80",
+    imageUrl: "/images/setus-appart/set-us-3-ezgif.com-resize.webp",
     title: "One Stop Solutiion",
     // description: "Collaboration drives results and fuels growth."
   },
   {
-    imageUrl: "https://images.unsplash.com/photo-1542744173-05336fcc7ad4?auto=format&fit=crop&w=400&q=80",
-    title: "Client-First Account Management",
+    imageUrl: "/images/setus-appart/set-us-4-ezgif.com-resize.jpg",
+    title: "ROI-Obsessed Growth Strategies",
     // description: "Delivering excellence that exceeds expectations."
   }
 ];
 
 export default function WhatSetsUsApart() {
   return (
-    <section className="w-full py-24 bg-gray-50">
+    <section className="w-full py-16 bg-gray-50">
       <div className="container mx-auto px-6">
         <h2 className="text-5xl font-bold text-center text-gray-900 mb-20">
           What Set Us Apart

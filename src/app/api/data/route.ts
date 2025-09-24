@@ -154,7 +154,7 @@ const TestimonialsData: testimonials[] = [
     name: 'Sushant  Kumar',
     profession: 'Director, @Glance',
     comment:
-      'I am delighted to recommend Sam Gupta for his exceptional contribution on Roposo Clout platform. Sam has been a transformative force . Sam’s expertise in digital transformation and e-commerce strategy have been invaluable to Roposo Clout.',
+      'I highly recommend Sam Gupta for his exceptional work on the Roposo Clout platform. His expertise in digital transformation and e-commerce strategy has been invaluable.',
     imgSrc: '/images/testimonial/image.png',
     rating: 5,
   },

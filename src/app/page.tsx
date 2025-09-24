@@ -27,7 +27,7 @@ export default function Home() {
       <Hero />
       <Aboutus />
       <Dedicated />
-      <Digital />
+      {/* <Digital /> */}
       <Beliefs />
       {/* <Work /> */}
       <Team />
@@ -37,7 +37,7 @@ export default function Home() {
       {/* <Manage /> */}
       {/* <FAQ /> */}
       <Testimonial />
-      <Articles />
+      {/* <Articles /> */}
       <Join />
       <Insta />
     </main>

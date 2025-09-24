@@ -17,11 +17,11 @@ const Dedicated = () => {
           {/* Left Column */}
           <div className="col-span-12 lg:col-span-6 justify-self-center">
             <Image
-              src="/images/dedicated/man.svg"
+              src="/images/dedicated/sam-new-one-ezgif.com-png-to-webp-converter.webp"
               alt="man-icon"
               width={416}
               height={530}
-              className="mx-auto md:mx-0"
+              className="mx-auto md:mx-0 rounded-4xl"
             />
           </div>
 
@@ -36,14 +36,12 @@ const Dedicated = () => {
                 className="absolute -top-16 -left-32 hidden lg:block"
               />
             </div>
-            <h2 className="text-center -mr-1 lg:text-start lg:leading-20 leading-14 text-2xl lg:text-4xl">
-              “Growth should be measurable, repeatable, and simple to execute.
-              My job is to cut the noise, align strategy with data, and scale
-              what works, fast.”
+            <h2 className="text-center -mr-1 lg:text-start  text-2xl lg:text-lg">
+              I’m a visionary technologist with 20+ years of experience, including over a decade at Accenture in North America, where I delivered executive programs for Fortune 500 leaders such as Cisco, Citibank, and Sobeys. My journey from coder to strategic program leader gives me a distinctive blend of deep technical expertise and sharp business acumen. In 2017, I founded Truliyo Digital as a one-stop digital powerhouse that handles 360° marketing, allowing brand owners to focus on what they do best. We use performance-marketing strategies to launch, optimize, and scale campaigns. As a sought-after speaker and Asia Excellence Award recipient, I bring rigor and agility to help brands scale faster, smarter, and with less effort.
             </h2>
 
             <h5 className="mt-12 lg:pl-32 relative lg:before:block before:hidden before:absolute before:bg-black before:h-0.5 before:w-24 before:left-0 before:bottom-1/2 text-center lg:text-start">
-              Samarth Gupta, CEO
+              Sam Gupta, Founder
             </h5>
           </div>
         </div>

@@ -9,7 +9,7 @@ const Insta = () => {
         <div className='relative group mx-auto overflow-hidden rounded-3xl'>
           {/* Image */}
           <Image
-            src='/images/insta/insta1.png'
+            src='/images/insta/linked-two-ezgif.com-png-to-webp-converter.webp'
             width={306}
             height={306}
             alt='instaOne'
@@ -17,10 +17,10 @@ const Insta = () => {
           />
 
           {/* Sliding Overlay */}
-          <Link href='https://instagram.com' target='_blank'>
+          <Link href='https://www.linkedin.com/posts/truliyo-digital_truliyoway-truliyodigital-metaads-activity-7375869066403569664-6zTq?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEMuxg4BJlmSScX_A3s__-NN-bssm-Xo8gc' target='_blank'>
             <div className='absolute inset-0 bg-black/60 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out rounded-3xl flex items-center justify-center'>
               <Image
-                src='/images/insta/instagram.svg'
+                src='https://img.icons8.com/color/48/linkedin.png'
                 alt='instagram'
                 width={36}
                 height={36}
@@ -33,7 +33,7 @@ const Insta = () => {
         {/* Image Container 2 */}
         <div className='relative group mx-auto overflow-hidden rounded-3xl'>
           <Image
-            src='/images/insta/insta2.png'
+            src='/images/insta/linked-one-ezgif.com-png-to-webp-converter.webp'
             width={306}
             height={306}
             alt='instaTwo'
@@ -41,10 +41,10 @@ const Insta = () => {
           />
 
           {/* Sliding Overlay */}
-          <Link href='https://instagram.com' target='_blank'>
+          <Link href='https://www.linkedin.com/posts/truliyo-digital_asiaexcellenceawards-bmagroup-truliyodigital-activity-7374450516841603072-0svU?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEMuxg4BJlmSScX_A3s__-NN-bssm-Xo8gc' target='_blank'>
             <div className='absolute inset-0 bg-black/60 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out rounded-3xl flex items-center justify-center'>
               <Image
-                src='/images/insta/instagram.svg'
+                src='https://img.icons8.com/color/48/linkedin.png'
                 alt='instagram'
                 width={36}
                 height={36}
@@ -57,17 +57,17 @@ const Insta = () => {
         {/* Image Container 3 */}
         <div className='relative group mx-auto overflow-hidden rounded-3xl'>
           <Image
-            src='/images/insta/insta3.png'
+            src='/images/insta/linked-three-ezgif.com-png-to-webp-converter.webp'
             width={306}
             height={306}
             alt='instaThree'
             className='w-full'
           />
           {/* Sliding Overlay */}
-          <Link href='https://instagram.com' target='_blank'>
+          <Link href='https://www.linkedin.com/posts/truliyo-digital_truliyodigital-bmagroup-mediabuying-activity-7373573888292823040-xrxI?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEMuxg4BJlmSScX_A3s__-NN-bssm-Xo8gc' target='_blank'>
             <div className='absolute inset-0 bg-black/60 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out rounded-3xl flex items-center justify-center'>
               <Image
-                src='/images/insta/instagram.svg'
+                src='https://img.icons8.com/color/48/linkedin.png'
                 alt='instagram'
                 width={36}
                 height={36}
@@ -80,17 +80,17 @@ const Insta = () => {
         {/* Image Container 4 */}
         <div className='relative group mx-auto overflow-hidden rounded-3xl'>
           <Image
-            src='/images/insta/insta4.png'
+            src='/images/insta/linked-four-ezgif.com-png-to-webp-converter.webp'
             width={306}
             height={306}
             alt='instaFour'
             className='w-full'
           />
           {/* Sliding Overlay */}
-          <Link href='https://instagram.com' target='_blank'>
+          <Link href='https://www.linkedin.com/posts/truliyo-digital_blueandbites-truliyovibes-throwbackfun-activity-7335294318804389889-nROE?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEMuxg4BJlmSScX_A3s__-NN-bssm-Xo8gc' target='_blank'>
             <div className='absolute inset-0 bg-black/60 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out rounded-3xl flex items-center justify-center'>
               <Image
-                src='/images/insta/instagram.svg'
+                src='https://img.icons8.com/color/48/linkedin.png'
                 alt='instagram'
                 width={36}
                 height={36}
