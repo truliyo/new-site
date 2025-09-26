@@ -11,10 +11,9 @@ import { footerlinks } from '@/app/types/footerlinks'
 // header nav-links data
 const headerData: HeaderItem[] = [
   { label: 'About Us', href: '#About' },
-  { label: 'Team', href: '#Team' },
-  { label: 'FAQ', href: '#FAQ' },
-  { label: 'Blog', href: '#Blog' },
-  { label: 'Contact Us', href: '#contact-Us' },
+  { label: 'Our Capabilities', href: '#cap' },
+  { label: 'Testimonials', href: '#test' },
+  { label: 'Social', href: '#socials' },
 ]
 
 // about data
@@ -242,9 +241,9 @@ const FooterLinksData: footerlinks[] = [
     section: 'Menu',
     links: [
       { label: 'About Us', href: '#About' },
-      { label: 'Team', href: '#Team' },
-      { label: 'FAQ', href: '#FAQ' },
-      { label: 'Blog', href: '#Blog' },
+      { label: 'Our Capabilities', href: '#cap' },
+      { label: 'Testimonials', href: '#test' },
+      { label: 'Socials', href: '#socials' },
     ],
   },
   // {

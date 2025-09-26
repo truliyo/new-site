@@ -83,7 +83,7 @@ export default function ModernServicesGrid() {
   return (
     <section
       className="w-full py-32 bg-gradient-to-br from-slate-50 via-white to-blue-50/30 relative overflow-hidden"
-      id="services"
+      id="cap"
     >
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl animate-pulse" />

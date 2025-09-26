@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const Insta = () => {
   return (
-    <section className='container mx-auto max-w-2xl pb-16 px-4 sm:px-6 lg:max-w-7xl lg:px-8 xl:-mb-44 lg:-mb-34 '>
+    <section className='container mx-auto max-w-2xl pb-16 px-4 sm:px-6 lg:max-w-7xl lg:px-8 xl:-mb-44 lg:-mb-34 ' id='socials'>
       <div className='grid grid-cols-1 gap-y-10 gap-x-16 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8'>
         {/* Image Container 1 */}
         <div className='relative group mx-auto overflow-hidden rounded-3xl'>

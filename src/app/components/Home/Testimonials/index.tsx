@@ -138,7 +138,7 @@ const Testimonial: React.FC = () => {
   return (
     <section
       className="bg-testimonial dark:bg-darkmode bg-cover bg-center overflow-hidden relative"
-      id="testimonial-section"
+      id="test"
     >
       <div className="container mx-auto max-w-7xl px-4 py-6">
         <div className="text-center">
