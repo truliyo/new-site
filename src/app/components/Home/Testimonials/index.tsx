@@ -24,12 +24,15 @@ const settings = {
   dots: true,
   infinite: true,
   slidesToShow: 3,
-  slidesToScroll: 2,
+  slidesToScroll: 1, // Changed to 1 for smoother scrolling
   arrows: false,
-  autoplay: false,
-  speed: 500,
-  autoplaySpeed: 2000,
-  cssEase: "linear",
+  autoplay: true, // Enable autoplay
+  speed: 1000, // Increased speed for smoother animation
+  autoplaySpeed: 2500, // 3 seconds between slides
+  cssEase: "ease-in-out", // Smoother easing
+  rtl: true, // Right to left scrolling
+  pauseOnHover: true, // Pause on hover for better UX
+  pauseOnFocus: true, // Pause on focus for accessibility
   responsive: [
     {
       breakpoint: 1200,
@@ -38,6 +41,13 @@ const settings = {
         slidesToScroll: 1,
         infinite: true,
         dots: true,
+        autoplay: true,
+        speed: 1000,
+        autoplaySpeed: 3000,
+        cssEase: "ease-in-out",
+        rtl: true,
+        pauseOnHover: true,
+        pauseOnFocus: true,
       },
     },
     {
@@ -47,6 +57,13 @@ const settings = {
         slidesToScroll: 1,
         infinite: true,
         dots: true,
+        autoplay: true,
+        speed: 1000,
+        autoplaySpeed: 3000,
+        cssEase: "ease-in-out",
+        rtl: true,
+        pauseOnHover: true,
+        pauseOnFocus: true,
       },
     },
     {
@@ -56,6 +73,13 @@ const settings = {
         slidesToScroll: 1,
         infinite: true,
         dots: true,
+        autoplay: true,
+        speed: 1000,
+        autoplaySpeed: 3000,
+        cssEase: "ease-in-out",
+        rtl: true,
+        pauseOnHover: true,
+        pauseOnFocus: true,
       },
     },
   ],
@@ -65,7 +89,7 @@ const settings = {
     </div>
   ),
   customPaging: () => (
-    <div className="w-3 h-3 bg-gray-300 rounded-full hover:bg-yellow-500 transition-colors" />
+    <div className="w-3 h-3 bg-gray-300 rounded-full hover:bg-yellow-500 transition-colors duration-300" />
   ),
 };
 
@@ -74,7 +98,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ items }) => {
 
   return (
     <div className="p-4 h-full">
-      <div className="bg-white dark:bg-darkHeroBg shadow-md rounded-2xl p-6 h-72 flex flex-col justify-between">
+      <div className="bg-white dark:bg-darkHeroBg shadow-md rounded-2xl p-6 h-72 flex flex-col justify-between transform transition-transform duration-300 hover:scale-105">
         {/* Avatar + Name */}
         <div className="flex items-center mb-4">
           <Image
@@ -104,7 +128,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ items }) => {
               key={i}
               icon="twemoji:star"
               width="18"
-              className={`mr-1 ${
+              className={`mr-1 transition-colors duration-200 ${
                 i < validRating ? "text-yellow-500" : "text-gray-300"
               }`}
             />

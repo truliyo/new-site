@@ -1,208 +1,285 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import { motion, useInView, useMotionValue, animate } from "framer-motion";
+import { motion, useInView, useSpring } from "framer-motion";
 import { Icon } from "@iconify/react";
 
 /**
- * Final StatsSection.tsx
- *
- * Requirements:
- * - framer-motion
- * - @iconify/react
- * - Tailwind CSS (or convert classes to your CSS)
- *
- * Replace: /images/hero-illustration.png with your image (or switch to next/image)
+ * Stats Section matching the exact design with animated numbers
  */
 
 type Stat = {
   id: string;
   value: number;
   label: string;
-  icon: string;
-  prefix?: string;
+  unit: string;
 };
 
 const STATS: Stat[] = [
   {
-    id: "users",
-    value: 40000,
-    label: "Successful digital marketing campaings",
-    icon: "mdi:account-group-outline",
-  }, // 40K+
+    id: "campaigns",
+    value: 40,
+    label: "Successful digital marketing campaigns",
+    unit: "K+",
+  },
   {
     id: "revenue",
-    value: 5000000,
+    value: 5,
     label: "Ad spend",
-    icon: "mdi:currency-usd",
-    prefix: "$",
-  }, // $5M+
+    unit: "M+",
+  },
   {
-    id: "downloads",
-    value: 2000000,
+    id: "conversions",
+    value: 2,
     label: "Conversions",
-    icon: "mdi:download-outline",
-  }, // 2M+
+    unit: "M+",
+  },
   {
-    id: "partners",
+    id: "growth",
     value: 35,
     label: "Average increase in lead generation",
-    icon: "mdi:handshake-outline",
-  }, // 35+
+    unit: "+",
+  },
 ];
 
-/** Format numbers into compact form like 40K+, $5M+ etc. */
-function formatCompact(n: number, prefix = ""): string {
-  if (n <= 0) return `${prefix}0+`;
-  const abs = Math.abs(n);
-
-  if (abs >= 1_000_000) {
-    const major = abs / 1_000_000;
-    const formatted = Number.isInteger(major)
-      ? `${major.toFixed(0)}`
-      : `${major.toFixed(1)}`;
-    return `${prefix}${formatted}M+`;
-  }
-
-  if (abs >= 1_000) {
-    const major = abs / 1_000;
-    const formatted = Number.isInteger(major)
-      ? `${major.toFixed(0)}`
-      : `${major.toFixed(1)}`;
-    return `${prefix}${formatted}K+`;
-  }
-
-  return `${prefix}${abs}+`;
-}
-
-/** AnimatedNumber shows compact formatted value while counting up */
-function AnimatedNumber({ value, prefix }: { value: number; prefix?: string }) {
-  const mv = useMotionValue(0);
-  const [display, setDisplay] = useState<string>(formatCompact(0, prefix));
-
+/** Animated Number Component */
+function AnimatedNumber({ 
+  value, 
+  unit, 
+  inView 
+}: { 
+  value: number; 
+  unit: string;
+  inView: boolean;
+}) {
+  const springValue = useSpring(0, {
+    stiffness: 60,
+    damping: 25,
+    restDelta: 0.01,
+  });
+  
+  const [displayValue, setDisplayValue] = useState(0);
+  
   useEffect(() => {
-    const duration = Math.min(2.2, 0.6 + Math.log10(Math.max(1, value)) * 0.25);
-    const controls = animate(mv, value, {
-      duration,
-      ease: [0.22, 1, 0.36, 1],
+    if (inView) {
+      springValue.set(value);
+    }
+  }, [inView, value, springValue]);
+  
+  useEffect(() => {
+    const unsubscribe = springValue.on("change", (latest) => {
+      setDisplayValue(Math.round(latest));
     });
-
-    const unsub = mv.on("change", (v) => {
-      setDisplay(formatCompact(Math.round(v), prefix));
-    });
-
-    return () => {
-      unsub();
-      controls.stop();
-    };
-  }, [value, prefix, mv]);
-
+    
+    return unsubscribe;
+  }, [springValue]);
+  
   return (
-    <span
-      aria-hidden
-      className="font-extrabold leading-none text-4xl sm:text-5xl md:text-6xl text-sky-700"
-    >
-      {display}
-    </span>
+    <div className="text-left mb-6">
+      <div className="text-5xl md:text-6xl lg:text-7xl font-bold text-blue-600 mb-2">
+        {displayValue}{unit}
+      </div>
+      <div className="text-sm md:text-base text-gray-600 leading-relaxed max-w-[180px]">
+        {/* Add $ prefix for revenue */}
+        {unit === "M+" && displayValue > 0 ? `$${displayValue}M+` : `${displayValue}${unit}`}
+        <br />
+        <span className="text-gray-500">{/* Label will be shown separately */}</span>
+      </div>
+    </div>
   );
 }
 
-/** Main component */
+/** Individual Stat Component */
+function StatItem({ stat, inView, delay }: { stat: Stat; inView: boolean; delay: number }) {
+  const springValue = useSpring(0, {
+    stiffness: 60,
+    damping: 25,
+    restDelta: 0.01,
+  });
+  
+  const [displayValue, setDisplayValue] = useState(0);
+  
+  useEffect(() => {
+    if (inView) {
+      const timer = setTimeout(() => {
+        springValue.set(stat.value);
+      }, delay);
+      return () => clearTimeout(timer);
+    }
+  }, [inView, stat.value, springValue, delay]);
+  
+  useEffect(() => {
+    const unsubscribe = springValue.on("change", (latest) => {
+      setDisplayValue(Math.round(latest));
+    });
+    
+    return unsubscribe;
+  }, [springValue]);
+  
+  return (
+    <motion.div 
+      className="mb-8 last:mb-0"
+      initial={{ opacity: 0, x: -30 }}
+      animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
+      transition={{ duration: 0.6, delay: delay / 1000 }}
+    >
+      <div className="text-5xl md:text-6xl font-bold text-[#1D99EC] mb-2">
+        {stat.id === "revenue" ? "$" : ""}{displayValue}{stat.unit}
+      </div>
+      <div className="text-sm text-gray-600 max-w-[200px] leading-relaxed">
+        {stat.label}
+      </div>
+    </motion.div>
+  );
+}
+
+/** Main Stats Section Component */
 export default function StatsSection() {
-  const ref = useRef<HTMLDivElement | null>(null);
+  const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, {
     once: true,
-    margin: "-120px 0px -120px 0px",
+    margin: "-100px 0px -100px 0px",
   });
 
   return (
-    <section
+    <section 
       ref={ref}
-      className="w-full bg-gradient-to-r from-white to-sky-50 py-20"
+      className="w-full bg-gradient-to-br from-blue-50 to-sky-100 py-20 overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        {/* Visual / Left */}
-        <div className="relative flex items-center justify-center">
-          <div className="w-full rounded-2xl overflow-hidden shadow-xl grid grid-cols-1 md:grid-cols-2">
-            {/* Left column: stacked big numbers */}
-            <div className="bg-sky-600/8 p-8 md:p-12 flex flex-col justify-center gap-6">
-              {STATS.map((s) => (
-                <div
-                  key={s.id}
-                  className="flex items-center justify-between py-3 border-b border-slate-200/40"
-                >
-                  <div>
-                    <div className="text-3xl md:text-4xl lg:text-3xl font-extrabold text-sky-700">
-                      {inView ? (
-                        <AnimatedNumber value={s.value} prefix={s.prefix} />
-                      ) : (
-                        formatCompact(0, s.prefix)
-                      )}
-                    </div>
-                    <div className="text-xs md:text-sm text-slate-500 mt-1">
-                      {s.label}
-                    </div>
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          
+          {/* Left Side - Stats and Illustration */}
+          <div className="relative">
+            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
+              <div className="grid grid-cols-1 md:grid-cols-2 min-h-[500px]">
+                
+                {/* Stats Column */}
+                <div className="bg-gradient-to-br from-blue-50 to-sky-50 p-8 lg:p-12 flex flex-col justify-center">
+                  {STATS.map((stat, index) => (
+                    <StatItem 
+                      key={stat.id} 
+                      stat={stat} 
+                      inView={inView} 
+                      delay={index * 200}
+                    />
+                  ))}
+                </div>
+
+                {/* Illustration Column */}
+                <div className="bg-gradient-to-br from-blue-500 to-blue-700 p-0 flex items-center justify-center relative overflow-hidden">
+                  {/* 3D Isometric Illustration */}
+                  <div className="relative w-full h-full flex items-center justify-center">
+                    <motion.div
+                      initial={{ scale: 0.8, opacity: 0 }}
+                      animate={inView ? { scale: 1, opacity: 1 } : { scale: 0.8, opacity: 0 }}
+                      transition={{ duration: 1, delay: 0.3 }}
+                      className="relative"
+                    >
+                      {/* Main Device/Platform */}
+                      <div className="relative w-64 h-48 bg-white/10 backdrop-blur-sm rounded-lg transform rotate-6 hover:rotate-3 transition-transform duration-500">
+                        
+                        {/* Screen Content */}
+                        <div className="absolute inset-4 bg-white/20 rounded">
+                          <div className="p-4">
+                            <div className="flex items-center gap-2 mb-3">
+                              <div className="w-6 h-6 bg-yellow-400 rounded-full"></div>
+                              <div className="w-4 h-1 bg-white/60 rounded"></div>
+                            </div>
+                            <div className="space-y-2">
+                              <div className="w-full h-1 bg-white/40 rounded"></div>
+                              <div className="w-3/4 h-1 bg-white/40 rounded"></div>
+                              <div className="w-1/2 h-1 bg-white/40 rounded"></div>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Floating Elements */}
+                        <motion.div 
+                          className="absolute -top-6 -right-6 w-12 h-12 bg-yellow-400 rounded-lg shadow-lg flex items-center justify-center"
+                          animate={{ y: [-5, 5, -5] }}
+                          transition={{ duration: 3, repeat: Infinity }}
+                        >
+                          <Icon icon="mdi:email" width={20} className="text-white" />
+                        </motion.div>
+
+                        <motion.div 
+                          className="absolute -bottom-4 -left-4 w-10 h-10 bg-green-400 rounded-full shadow-lg flex items-center justify-center"
+                          animate={{ y: [5, -5, 5] }}
+                          transition={{ duration: 2.5, repeat: Infinity }}
+                        >
+                          <Icon icon="mdi:chart-line" width={16} className="text-white" />
+                        </motion.div>
+
+                        <motion.div 
+                          className="absolute -top-2 left-1/3 w-8 h-8 bg-red-400 rounded-lg shadow-lg flex items-center justify-center"
+                          animate={{ rotate: [0, 10, -10, 0] }}
+                          transition={{ duration: 4, repeat: Infinity }}
+                        >
+                          <Icon icon="mdi:bullhorn" width={14} className="text-white" />
+                        </motion.div>
+                      </div>
+
+                      {/* Person Figure */}
+                      <motion.div 
+                        className="absolute -bottom-8 -left-12 w-16 h-20 bg-orange-400 rounded-t-full"
+                        initial={{ y: 20 }}
+                        animate={inView ? { y: 0 } : { y: 20 }}
+                        transition={{ duration: 0.8, delay: 0.6 }}
+                      >
+                        {/* Simple person silhouette */}
+                        <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-orange-500 rounded-full"></div>
+                        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-orange-400 rounded-t-lg"></div>
+                      </motion.div>
+
+                      {/* Chart Elements */}
+                      <motion.div 
+                        className="absolute top-12 -right-8 w-20 h-12 bg-white/20 backdrop-blur-sm rounded-lg"
+                        animate={{ scale: [1, 1.05, 1] }}
+                        transition={{ duration: 2, repeat: Infinity }}
+                      >
+                        <div className="p-2">
+                          <div className="flex items-end gap-1 h-6">
+                            <div className="w-2 bg-green-400 rounded-t" style={{ height: '60%' }}></div>
+                            <div className="w-2 bg-blue-400 rounded-t" style={{ height: '80%' }}></div>
+                            <div className="w-2 bg-yellow-400 rounded-t" style={{ height: '100%' }}></div>
+                            <div className="w-2 bg-red-400 rounded-t" style={{ height: '40%' }}></div>
+                          </div>
+                        </div>
+                      </motion.div>
+                    </motion.div>
                   </div>
-
-                  {/* <div className="hidden md:block opacity-70">
-                    <Icon icon={s.icon} width={28} height={28} className="text-sky-500" />
-                  </div> */}
-                </div>
-              ))}
-            </div>
-
-            {/* Right column: illustration */}
-            <div className="bg-white p-0 md:p-0 flex items-center justify-center">
-              <div className="w-full h-full">
-                <div className="rounded-lg overflow-hidden bg-sky-50 w-full h-full flex items-center justify-center">
-                  {/* Replace this img with your own or use next/image */}
-                  <img
-                    src="/images/team/team-img-ezgif.com-png-to-webp-converter.webp"
-                    alt="Hero illustration"
-                    className="w-full h-full object-fit"
-                  />
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        {/* Content / Right */}
-        <div className="flex flex-col gap-6">
-          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-100 text-sky-700 text-sm font-medium w-max">
-            <Icon icon="mdi:rocket-launch" width={18} height={18} />
-            Truliyo Digital
-          </span>
+          {/* Right Side - Content */}
+          <motion.div 
+            className="space-y-8"
+            initial={{ opacity: 0, x: 50 }}
+            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <div className="space-y-6">
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 text-[#1D99EC] text-sm font-semibold">
+                <Icon icon="mdi:rocket-launch" width={18} height={18} />
+                Truliyo Digital
+              </span>
 
-          <h2 className="text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight">
-            Creative Marketing for a Digital World.
-          </h2>
+              <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight">
+                Creative Marketing for a{" "}
+                <span className="text-[#1D99EC]">Digital World.</span>
+              </h2>
 
-          <p className="text-slate-600 max-w-prose">
-            Improve your business website’s online presence with targeted
-            digital marketing, beautiful design, and measurable campaigns. We
-            combine creative strategy and technical execution to help you stand
-            out and grow.
-          </p>
-
-          {/* Compact stats row for small screens */}
-          <div className="mt-4 grid grid-cols-3 gap-3 lg:hidden">
-            {STATS.map((s) => (
-              <div
-                key={s.id}
-                className="bg-white/60 p-3 rounded-lg text-center"
-              >
-                <div className="text-lg font-bold text-sky-700">
-                  {inView ? (
-                    <AnimatedNumber value={s.value} prefix={s.prefix} />
-                  ) : (
-                    formatCompact(0, s.prefix)
-                  )}
-                </div>
-                <div className="text-xs text-slate-500">{s.label}</div>
-              </div>
-            ))}
-          </div>
+              <p className="text-lg text-gray-600 leading-relaxed max-w-2xl">
+                Improve your business website's online presence with targeted 
+                digital marketing, beautiful design, and measurable campaigns. We 
+                combine creative strategy and technical execution to help you stand 
+                out and grow.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
