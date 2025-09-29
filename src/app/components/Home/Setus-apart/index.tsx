@@ -10,11 +10,11 @@ const FEATURES = [
     title: "Client-First Account Management",
   },
   {
-    imageUrl: "/images/setus-appart/set-us-3-ezgif.com-resize.webp",
+    imageUrl: "/images/setus-appart/one-stop.webp",
     title: "One Stop Solution",
   },
   {
-    imageUrl: "/images/setus-appart/set-us-4-ezgif.com-resize.jpg",
+    imageUrl: "/images/setus-appart/ROI-1.webp",
     title: "ROI-Obsessed Growth Strategies",
   }
 ];
@@ -42,7 +42,7 @@ export default function WhatSetsUsApart() {
 
               {/* Text overlay - white text by default, black on hover */}
               <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-6 bg-gradient-to-t from-black/50 via-black/20 to-transparent group-hover:from-transparent group-hover:via-transparent group-hover:to-transparent transition-all duration-500">
-                <h3 className="text-3xl font-semibold drop-shadow-2xl text-white group-hover:text-black group-hover:drop-shadow-none transition-all duration-500">
+                <h3 className="text-3xl font-bold drop-shadow-2xl text-white group-hover:text-black group-hover:drop-shadow-none transition-all duration-500">
                   {title}
                 </h3>
               </div>
