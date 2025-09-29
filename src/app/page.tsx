@@ -18,7 +18,7 @@ import WhatSetsUsApart from './components/Home/Setus-apart'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Desgy Solutions',
+  title: 'Truliyo Digital',
 }
 
 export default function Home() {

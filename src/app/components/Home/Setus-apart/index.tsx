@@ -4,22 +4,18 @@ const FEATURES = [
   {
     imageUrl: "/images/setus-appart/set-us-1-ezgif.com-resize.webp",
     title: "100% Transparency With Real-Time Dashboards",
-    // description: "We leverage the latest and greatest to empower your business."
   },
   {
     imageUrl: "/images/setus-appart/set-us-2-ezgif.com-jpg-to-webp-converter.jpg",
     title: "Client-First Account Management",
-    // description: "Creative strategies tailor-made to set you apart."
   },
   {
     imageUrl: "/images/setus-appart/set-us-3-ezgif.com-resize.webp",
-    title: "One Stop Solutiion",
-    // description: "Collaboration drives results and fuels growth."
+    title: "One Stop Solution",
   },
   {
     imageUrl: "/images/setus-appart/set-us-4-ezgif.com-resize.jpg",
     title: "ROI-Obsessed Growth Strategies",
-    // description: "Delivering excellence that exceeds expectations."
   }
 ];
 
@@ -36,20 +32,19 @@ export default function WhatSetsUsApart() {
               key={idx}
               className="relative w-full max-w-xs h-[400px] rounded-3xl overflow-hidden shadow-lg cursor-pointer group"
             >
-              {/* Image with smooth zoom on hover */}
+              {/* Image - grayscale by default, full color on hover */}
               <img
                 src={imageUrl}
                 alt={title}
-                className="object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-110 group-hover:opacity-50"
+                className="object-cover w-full h-full transition-all duration-500 ease-in-out filter grayscale group-hover:grayscale-0 group-hover:scale-110"
                 loading="lazy"
               />
 
-              {/* Dark overlay appears on hover */}
-  <div className="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-50 transition-opacity duration-500" />
-
-              {/* Text content overlay */}
-              <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-6 opacity-0 group-hover:opacity-100 text-white transition-opacity duration-500 bg-gradient-to-t from-black/70 via-transparent to-transparent">
-                <h3 className="text-3xl font-semibold mb-3 drop-shadow-lg text-white">{title}</h3>
+              {/* Text overlay - white text by default, black on hover */}
+              <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-6 bg-gradient-to-t from-black/50 via-black/20 to-transparent group-hover:from-transparent group-hover:via-transparent group-hover:to-transparent transition-all duration-500">
+                <h3 className="text-3xl font-semibold drop-shadow-2xl text-white group-hover:text-black group-hover:drop-shadow-none transition-all duration-500">
+                  {title}
+                </h3>
               </div>
             </div>
           ))}
