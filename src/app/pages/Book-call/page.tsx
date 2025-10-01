@@ -40,7 +40,7 @@ export default function Booking() {
 
         {/* RIGHT SIDE - Info Panel */}
         <div className="bg-white rounded-3xl shadow-xl p-8 flex flex-col justify-center border border-gray-100">
-          <h3 className="text-2xl lg:text-3xl font-bold text-blue-700 mb-6 leading-snug">
+          <h3 className="text-2xl lg:text-3xl font-bold text-[#1D99EC] mb-6 leading-snug">
             Interested in Getting in Touch <br /> with Our Sales Representative?
           </h3>
 
@@ -64,14 +64,14 @@ export default function Booking() {
             <div className="p-6 bg-gradient-to-b from-blue-50 to-white rounded-2xl shadow-md text-center transform transition-all duration-200 hover:shadow-lg hover:-translate-y-1">
               <Icon
                 icon="mdi:trending-up"
-                className="mx-auto mb-3 text-blue-600"
+                className="mx-auto mb-3 text-[#1D99EC]"
                 width="32"
                 height="32"
               />
               <p className="text-sm font-medium text-gray-600">
                 Leads Generated
               </p>
-              <p className="text-2xl font-extrabold text-blue-700 mt-1">
+              <p className="text-2xl font-extrabold text-[#1D99EC] mt-1">
                 <CountUp end={4985623} duration={3} separator="," />
               </p>
             </div>
@@ -80,14 +80,14 @@ export default function Booking() {
             <div className="p-6 bg-gradient-to-b from-blue-50 to-white rounded-2xl shadow-md text-center transform transition-all duration-200 hover:shadow-lg hover:-translate-y-1">
               <Icon
                 icon="mdi:phone"
-                className="mx-auto mb-3 text-blue-600"
+                className="mx-auto mb-3 text-[#1D99EC]"
                 width="32"
                 height="32"
               />
               <p className="text-sm font-medium text-gray-600">
                 Calls Generated
               </p>
-              <p className="text-2xl font-extrabold text-blue-700 mt-1">
+              <p className="text-2xl font-extrabold text-[#1D99EC] mt-1">
                 <CountUp end={3585952} duration={3} separator="," />
               </p>
             </div>
@@ -96,14 +96,14 @@ export default function Booking() {
             <div className="p-6 bg-gradient-to-b from-blue-50 to-white rounded-2xl shadow-md text-center transform transition-all duration-200 hover:shadow-lg hover:-translate-y-1">
               <Icon
                 icon="mdi:currency-usd"
-                className="mx-auto mb-3 text-blue-600"
+                className="mx-auto mb-3 text-[#1D99EC]"
                 width="32"
                 height="32"
               />
               <p className="text-sm font-medium text-gray-600">
                 Revenue Generated
               </p>
-              <p className="text-2xl font-extrabold text-blue-700 mt-1">
+              <p className="text-2xl font-extrabold text-[#1D99EC] mt-1">
                 $<CountUp end={245821} duration={3} separator="," />
               </p>
             </div>

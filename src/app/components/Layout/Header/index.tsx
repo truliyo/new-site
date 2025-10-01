@@ -196,8 +196,8 @@ const Header: React.FC = () => {
             )}
             <div className="mt-4 flex flex-col space-y-4 w-full">
               <Link
-                href="#"
-                className="bg-primary text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+                href="/pages/Book-call"
+                className="bg-[#1D99EC] text-white px-4 py-2 rounded-lg hover:bg-[#1D99EC]"
                 onClick={() => {
                   // setIsSignUpOpen(true)
                   setNavbarOpen(false);
