@@ -1,52 +1,29 @@
-"use client";
 import React from "react";
-import Image from "next/image";
 
-const Dedicated = () => {
-  return (
-    <section className="relative bg-cover bg-center overflow-hidden">
-      <div className="container mx-auto max-w-7xl px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
-          <Image
-            src="/images/dedicated/spiral.svg"
-            height={272}
-            width={686}
-            alt="spiral-design"
-            className="absolute left-0 top-0 hidden lg:block -z-10"
-          />
-          {/* Left Column */}
-          <div className="col-span-12 lg:col-span-6 justify-self-center">
-            <Image
-              src="/images/dedicated/sam-new-one-ezgif.com-png-to-webp-converter.webp"
-              alt="man-icon"
-              width={416}
-              height={530}
-              className="mx-auto md:mx-0 rounded-4xl"
-            />
-          </div>
-
-          {/* Right Column */}
-          <div className="col-span-12 lg:col-span-6">
-            <div className="relative">
-              <Image
-                src="/images/dedicated/comma.svg"
-                alt="comma-image"
-                width={200}
-                height={106}
-                className="absolute -top-16 -left-32 hidden lg:block"
-              />
-            </div>
-            <h2 className="text-center -mr-1 lg:text-start  text-2xl lg:text-lg">
-              I’m a visionary technologist with 20+ years of experience, including over a decade at Accenture in North America, where I delivered executive programs for Fortune 500 leaders such as Cisco, Citibank, and Sobeys. My journey from coder to strategic program leader gives me a distinctive blend of deep technical expertise and sharp business acumen. In 2017, I founded Truliyo Digital as a one-stop digital powerhouse that handles 360° marketing, allowing brand owners to focus on what they do best. We use performance-marketing strategies to launch, optimize, and scale campaigns. As a sought-after speaker and Asia Excellence Award recipient, I bring rigor and agility to help brands scale faster, smarter, and with less effort.
-            </h2>
-
-            <h5 className="mt-12 lg:pl-32 relative lg:before:block before:hidden before:absolute before:bg-black before:h-0.5 before:w-24 before:left-0 before:bottom-1/2 text-center lg:text-start">
-              Sam Gupta, Founder
-            </h5>
-          </div>
-        </div>
+const TestimonialSection: React.FC = () => (
+  <div className="flex justify-center min-h-screen py-12 px-4 bg-white">
+    <div className="relative flex flex-col md:flex-row bg-[#1D99EC] rounded-3xl w-full max-w-7xl md:min-h-[480px] overflow-visible p-8 md:p-16">
+      
+      {/* Image container with increased width */}
+      <div className="relative md:absolute md:left-16 md:top-[-60px] md:h-[calc(100%+60px)] flex md:items-end w-full md:w-[400px] shrink-0">
+        <img
+          src="/images/dedicated/sam-new-img.png"
+          alt="Person"
+          className="w-full h-full object-cover"
+        />
       </div>
-    </section>
-  );
-};
-export default Dedicated;
+      
+      {/* Text content with updated margin-left */}
+      <div className="mt-10 md:mt-0 md:ml-[440px] text-white flex flex-col justify-center flex-1 z-10">
+        <p className="text-3xl md:text-5xl font-semibold leading-snug mb-8">
+          Sam, award-winning entrepreneur and speaker, founded Truliyo Digital to deliver 360° marketing strategies that help brands scale effortlessly.
+        </p>
+        <p className="text-xl font-bold">Sam Gupta</p>
+        <p className="opacity-75 text-lg">Founder, Truliyo Digital</p>
+      </div>
+      
+    </div>
+  </div>
+);
+
+export default TestimonialSection;

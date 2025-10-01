@@ -26,7 +26,7 @@ export default function Home() {
     <main>
       <Hero />
       <Aboutus />
-      <Dedicated />
+      
       {/* <Digital /> */}
       <Beliefs />
       {/* <Work /> */}
@@ -36,6 +36,7 @@ export default function Home() {
       {/* <Featured /> */}
       {/* <Manage /> */}
       {/* <FAQ /> */}
+      <Dedicated />
       <Testimonial />
       {/* <Articles /> */}
       <Join />
