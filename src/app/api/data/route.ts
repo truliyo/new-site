@@ -32,7 +32,7 @@ const Aboutdata: aboutdata[] = [
     paragraph:
       'Expertise in paid media, SEO, social, affiliate marketing, web optimization, and performance-driven creative that converts',
     link: 'Learn more',
-    path: '#services',  // 👈 new route
+    path: '#cap',  // 👈 new route
   },
   {
     heading: 'The Truliyo Way',

@@ -166,7 +166,7 @@ export default function AboutUs() {
           <div>
             <a
               href="/pages/Book-call"
-              className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg shadow-md transition"
+              className="inline-block bg-[#1D99EC] text-white font-semibold px-6 py-3 rounded-lg shadow-md transition"
             >
               Book a call
             </a>

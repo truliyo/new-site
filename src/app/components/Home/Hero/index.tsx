@@ -234,7 +234,7 @@ const Hero = () => {
               className='grid grid-cols-3 gap-6 mt-12 pt-12 border-t border-gray-200'
             >
               <div>
-                <h3 className='text-3xl lg:text-4xl font-bold text-[#1D99EC] mb-1'>20+</h3>
+                <h3 className='text-3xl lg:text-4xl font-bold text-[#1D99EC] mb-1'>10+</h3>
                 <p className='text-sm text-gray-600'>Years Experience</p>
               </div>
               <div>
