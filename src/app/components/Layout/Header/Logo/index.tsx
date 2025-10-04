@@ -6,7 +6,7 @@ const Logo: React.FC = () => {
     <Link href="/" className="text-3xl font-semibold">
       <div className="relative w-[180px] h-[50px] md:w-[240px] md:h-[65px] lg:w-[300px] lg:h-[80px]">
         <Image
-          src="/images/hero/new-logo-removebg-preview.png"
+          src="/images/hero/Untitled design (1)-Photoroom.png"
           alt="logo"
           width={180}
           height={50}

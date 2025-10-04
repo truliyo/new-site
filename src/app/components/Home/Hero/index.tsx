@@ -65,7 +65,7 @@ const Hero = () => {
   }
 
   return (
-    <section className='relative overflow-hidden bg-gradient-to-br bg-white min-h-screen flex items-center mt-10 '>
+    <section className='relative overflow-hidden bg-gradient-to-br bg-white min-h-screen flex items-center mt-6 '>
       {/* Animated Background Elements */}
       <motion.div 
         className='absolute top-20 right-10 w-72 h-72 rounded-full blur-3xl'

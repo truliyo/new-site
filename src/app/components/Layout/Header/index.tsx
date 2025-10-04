@@ -90,7 +90,7 @@ const Header: React.FC = () => {
         <div className="container mx-auto max-w-(--breakpoint-xl) flex items-center justify-between px-4">
           <div
             className={`pr-16 lg:border-r border-black/10 duration-300 ${
-              sticky ? "py-3" : "py-7"
+              sticky ? "py-3" : "py-2"
             }`}
           >
             <Logo />
